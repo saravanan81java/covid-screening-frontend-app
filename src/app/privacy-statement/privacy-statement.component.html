@@ -1,0 +1,48 @@
+<ul class="list-unstyled">
+  <li>
+    <details>
+      <summary>
+        <ng-container *transloco="let t; read: 'privacy.notice'">
+          {{ t("header") }}
+        </ng-container>
+      </summary>
+
+      <ng-container *transloco="let t; read: 'privacy.notice'">
+        <small
+          ><p>
+            {{ t("para.one.before.link") }}
+            <a [href]="'financial.admin.link' | transloco">{{
+              t("para.one.link.label")
+            }}</a>
+            {{ t("para.one.after.link") }}
+          </p>
+          <p>
+            {{ t("para.two") }}
+          </p>
+          <p>
+            {{ t("para.three") }}
+          </p>
+          <p>
+            {{ t("para.four") }}
+            <a href="http://www.priv.gc.ca/">www.priv.gc.ca.</a>
+          </p>
+        </small>
+      </ng-container>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary>
+        <ng-container *transloco="let t; read: 'consent.notice'">
+          <p>{{ t("header") }}</p>
+        </ng-container>
+      </summary>
+
+      <ng-container *transloco="let t; read: 'consent.notice'">
+        <small
+          ><p>{{ t("para.one") }}</p></small
+        >
+      </ng-container>
+    </details>
+  </li>
+</ul>

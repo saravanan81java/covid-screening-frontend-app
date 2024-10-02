@@ -1,0 +1,16 @@
+<section class="about-section mb-5">
+  <h2>
+    <ng-container *transloco="let t">
+      {{ t("about") }}
+    </ng-container>
+  </h2>
+  <ng-container *transloco="let t; read: 'about.content'">
+    <p>{{ t("para.one") }}</p>
+    <p>{{ t("para.two") }}</p>
+    <p>{{ t("para.three") }}</p>
+    <p>{{ t("para.four") }}</p>
+  </ng-container>
+</section>
+<section class="privacy-section">
+  <app-privacy-statement></app-privacy-statement>
+</section>

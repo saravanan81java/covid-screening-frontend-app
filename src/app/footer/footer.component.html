@@ -1,0 +1,139 @@
+<!-- Static footer starts -->
+<footer id="wb-info">
+  <div class="landscape">
+    <nav class="container wb-navcurr">
+      <h2 class="wb-inv">
+        <ng-container *transloco="let t">{{ t("about.gov") }}</ng-container>
+      </h2>
+      <ul class="list-unstyled colcount-sm-2 colcount-md-3">
+        <li>
+          <a [href]="'contact.us.link' | transloco">
+            <ng-container *transloco="let t">
+              {{ t("contact.us") }}
+            </ng-container>
+          </a>
+        </li>
+        <li>
+          <a [href]="'departments.agencies.link' | transloco">
+            <ng-container *transloco="let t">
+              {{ t("departments.agencies") }}
+            </ng-container>
+          </a>
+        </li>
+        <li>
+          <a [href]="'public.service.military.link' | transloco">
+            <ng-container *transloco="let t">
+              {{ t("public.service.military") }}
+            </ng-container>
+          </a>
+        </li>
+        <li>
+          <a [href]="'news.link' | transloco">
+            <ng-container *transloco="let t">
+              {{ t("news") }}
+            </ng-container>
+          </a>
+        </li>
+        <li>
+          <a [href]="'treaties.laws.regulations.link' | transloco">
+            <ng-container *transloco="let t">
+              {{ t("treaties.laws.regulations") }}
+            </ng-container>
+          </a>
+        </li>
+        <li>
+          <a [href]="'gov.reporting.link' | transloco">
+            <ng-container *transloco="let t">
+              {{ t("gov.reporting") }}
+            </ng-container>
+          </a>
+        </li>
+        <li>
+          <a [href]="'prime.minister.link' | transloco">
+            <ng-container *transloco="let t">
+              {{ t("prime.minister") }}
+            </ng-container>
+          </a>
+        </li>
+        <li>
+          <a [href]="'how.gov.works.link' | transloco">
+            <ng-container *transloco="let t">
+              {{ t("how.gov.works") }}
+            </ng-container>
+          </a>
+        </li>
+        <li>
+          <a [href]="'open.gov.link' | transloco">
+            <ng-container *transloco="let t">
+              {{ t("open.gov") }}
+            </ng-container>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="brand">
+    <div class="container">
+      <div class="row">
+        <nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
+          <h2 class="wb-inv">
+            <ng-container *transloco="let t">
+              {{ t("about.this.site") }}
+            </ng-container>
+          </h2>
+          <ul>
+            <li>
+              <a [href]="'social.media.link' | transloco">
+                <ng-container *transloco="let t">
+                  {{ t("social.media") }}
+                </ng-container></a
+              >
+            </li>
+            <li>
+              <a [href]="'mobile.applications.link' | transloco">
+                <ng-container *transloco="let t">
+                  {{ t("mobile.applications") }}
+                </ng-container>
+              </a>
+            </li>
+            <li>
+              <a [href]="'about.canada.ca.link' | transloco">
+                <ng-container *transloco="let t">
+                  {{ t("about.canada.ca") }}
+                </ng-container>
+              </a>
+            </li>
+            <li>
+              <a [href]="'terms.conditions.link' | transloco">
+                <ng-container *transloco="let t">
+                  {{ t("terms.conditions") }}
+                </ng-container>
+              </a>
+            </li>
+            <li>
+              <a [href]="'privacy.link' | transloco">
+                <ng-container *transloco="let t">
+                  {{ t("privacy") }}
+                </ng-container>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="col-xs-6 visible-sm visible-xs tofpg">
+          <a href="#wb-cont">
+            <ng-container *transloco="let t">
+              {{ t("top.of.page") }}
+            </ng-container>
+            <span class="glyphicon glyphicon-chevron-up"></span>
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-2 text-right">
+          <img
+            src="/assets/img/wmms-blk.svg"
+            [alt]="'canada.symbol' | transloco"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,30 @@
+<section>
+  <h2>
+    <ng-container *transloco="let t">
+      {{ t("question", { number: 4 }) }}
+    </ng-container>
+  </h2>
+  <p>
+    <ng-container *transloco="let t">
+      {{ t("question.doctor.isolate", { number: 4 }) }}
+    </ng-container>
+  </p>
+  <button
+    type="button"
+    class="btn btn-primary btn-question-response mr-4 py-2"
+    (click)="onYes()"
+  >
+    <ng-container *transloco="let t">
+      {{ t("yes") }}
+    </ng-container>
+  </button>
+  <button
+    type="button"
+    class="btn btn-secondary btn-question-response py-2"
+    (click)="onNo()"
+  >
+    <ng-container *transloco="let t">
+      {{ t("no") }}
+    </ng-container>
+  </button>
+</section>

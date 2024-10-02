@@ -1,0 +1,55 @@
+<container-element [ngSwitch]="currentStep">
+  <!-- the same view can be shown in more than one case -->
+  <div *ngSwitchCase="'ConsentQ'">
+    <app-consent-q (messageEvent)="receiveMessage($event)"></app-consent-q>
+  </div>
+  <div *ngSwitchCase="'PersonalInfoQ'">
+    <app-personal-info-q
+      (messageEvent)="receiveMessage($event)"
+    ></app-personal-info-q>
+  </div>
+  <div *ngSwitchCase="'SymptomsQ'">
+    <app-symptoms-q (messageEvent)="receiveMessage($event)"></app-symptoms-q>
+  </div>
+  <div *ngSwitchCase="'WaitingForResultsQ'">
+    <app-waiting-for-results-q
+      (messageEvent)="receiveMessage($event)"
+    ></app-waiting-for-results-q>
+  </div>
+  <div *ngSwitchCase="'DoctorIsolationQ'">
+    <app-doctor-isolation-q
+      (messageEvent)="receiveMessage($event)"
+    ></app-doctor-isolation-q>
+  </div>
+  <div *ngSwitchCase="'CloseContactQ'">
+    <app-close-contact-q
+      (messageEvent)="receiveMessage($event)"
+    ></app-close-contact-q>
+  </div>
+  <div *ngSwitchCase="'TravelQuarantineQ'">
+    <app-travel-quarantine-q
+      (messageEvent)="receiveMessage($event)"
+    ></app-travel-quarantine-q>
+  </div>
+  <div *ngSwitchCase="'CloseContactQuarantineQ'">
+    <app-close-contact-quarantine-q
+      (messageEvent)="receiveMessage($event)"
+    ></app-close-contact-quarantine-q>
+  </div>
+  <div *ngSwitchCase="'Success'">
+    <app-success
+      [fullName]="formData.PersonalInfoQ?.fullName"
+      [email]="formData.PersonalInfoQ?.email"
+      [phone]="formData.PersonalInfoQ?.phone"
+    ></app-success>
+  </div>
+  <div *ngSwitchCase="'Rejection'">
+    <app-rejection
+      [fullName]="formData.PersonalInfoQ?.fullName"
+      [email]="formData.PersonalInfoQ?.email"
+      [phone]="formData.PersonalInfoQ?.phone"
+    ></app-rejection>
+  </div>
+  <!--default case when there are no matches -->
+  <div *ngSwitchDefault>default selected</div>
+</container-element>

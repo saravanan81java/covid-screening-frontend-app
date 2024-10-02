@@ -1,0 +1,21 @@
+version: "3"
+services:
+  angular-ui:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    container_name: angular-ui
+    image: angular-ui
+    volumes:
+      - ./:/app-ui
+      - angular-ui-data:/app-ui/node_modules
+
+networks:
+  default:
+    name: angular-ui-network
+
+volumes:
+  angular-ui-data:
+    name: angular-ui-data

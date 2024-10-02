@@ -1,0 +1,11 @@
+<app-landing-page-content></app-landing-page-content>
+
+<section>
+  <ng-container *transloco="let t; read: 'consent.and.start'">
+    <h2>{{ t("header") }}</h2>
+    <p>{{ t("message") }}</p>
+    <button (click)="onConsent()" class="btn btn-primary btn-question-response">
+      {{ t("button.label") }}
+    </button>
+  </ng-container>
+</section>

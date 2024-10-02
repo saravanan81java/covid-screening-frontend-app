@@ -1,0 +1,96 @@
+<section>
+  <h2>
+    <ng-container *transloco="let t">
+      <strong>{{ t("result") }}</strong>
+    </ng-container>
+  </h2>
+  <div class="panel panel-danger">
+    <header class="panel-heading">
+      <h3 class="panel-title">
+        <i class="fas fa-ban mr-2" aria-hidden="true"></i>
+        <ng-container *transloco="let t">
+          {{ t("you.may.not.enter") }}
+        </ng-container>
+      </h3>
+    </header>
+    <div class="panel-body">
+      <ul class="list-unstyled">
+        <li>
+          <strong>
+            <ng-container *transloco="let t">
+              {{ t("visitor") }}{{ t("colon") }}
+            </ng-container>
+          </strong>
+          {{ fullName }}
+        </li>
+        <li>
+          <strong>
+            <ng-container *transloco="let t">
+              <span> {{ t("valid.until") }}{{ t("colon") }}</span>
+            </ng-container>
+          </strong>
+          {{ resultValidUntil | date: "d/M/yyy HH:mm (z)" }}
+        </li>
+        <hr class="my-4 py-0" />
+        <li>
+          <small>
+            <ng-container *transloco="let t">
+              <span> {{ t("email") }}{{ t("colon") }} </span>
+            </ng-container>
+            {{ email }}
+          </small>
+        </li>
+        <li>
+          <small>
+            <ng-container *transloco="let t">
+              <span> {{ t("phone") }}{{ t("colon") }} </span>
+            </ng-container>
+            {{ phone }}
+          </small>
+        </li>
+        <li>
+          <small>
+            <ng-container *transloco="let t">
+              <span> {{ t("result.issued") }}{{ t("colon") }} </span>
+            </ng-container>
+            {{ resultIssuedOn | date: "d/M/yyy HH:mm (z)" }}
+          </small>
+        </li>
+      </ul>
+      <p>
+        <small>
+          <em>
+            <ng-container *transloco="let t">
+              {{ t("rejection.reason") }}
+            </ng-container>
+          </em>
+        </small>
+      </p>
+    </div>
+  </div>
+
+  <div class="alert alert-danger py-2" role="alert">
+    <ng-container *transloco="let t">
+      {{ t("follow.local.guidelines") }}
+    </ng-container>
+  </div>
+</section>
+
+<hr class="my-4" />
+
+<section>
+  <h2>
+    <ng-container *transloco="let t">
+      {{ t("occupational.health") }}
+    </ng-container>
+  </h2>
+  <p>
+    <ng-container *transloco="let t; read: 'additional.occupational.health'">
+      {{ t("message.part.one") }}
+      <a [href]="'covid.19.page.link' | transloco">
+        {{ t("link.label") }}
+      </a>
+      {{ t("message.part.two") }}
+    </ng-container>
+  </p>
+</section>
